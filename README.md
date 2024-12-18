@@ -11,13 +11,15 @@ Package sẽ được chia thành các thành phần chính như sau:
 
 ```
 /lib
-  ├── state_manager.dart        # Lớp quản lý state tổng quát
-  ├── state_notifier.dart       # StateNotifier: cập nhật và quản lý state
-  ├── state_observer.dart       # Gắn state vào UI và lắng nghe sự thay đổi
-  ├── async_state_manager.dart  # Quản lý state bất đồng bộ
-  ├── resettable_state.dart     # Hỗ trợ reset state
-  ├── performance_tracker.dart  # Công cụ đo hiệu suất
-  └── example/                  # Ví dụ minh họa cách sử dụng package
+  ├── src/
+  │   ├── state_manager.dart     # Lớp quản lý state tổng quát
+  │   ├── state_notifier.dart.   # StateNotifier: cập nhật và quản lý state
+  │   ├── state_observer.dart # Gắn state vào UI và lắng nghe sự thay đổi
+  │   ├── async_state_manager.dart  # Quản lý state bất đồng bộ
+  │   ├── resettable_state.dart. # Hỗ trợ reset state
+  │   ├── performance_tracker.dart. # Công cụ đo hiệu suất
+  └── example/     # Ví dụ minh họa cách sử dụng package
+
 ```
 
 ---
