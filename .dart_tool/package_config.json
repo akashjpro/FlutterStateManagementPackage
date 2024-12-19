@@ -164,13 +164,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "flutter_state_management_package",
+      "name": "state_management",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-18T03:34:29.577279Z",
+  "generated": "2024-12-19T02:14:32.773228Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/thanhtri/development/flutter",
