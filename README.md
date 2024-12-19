@@ -219,6 +219,8 @@ class CounterScreen extends StatelessWidget {
 
 ```
 
+<img src="assets/example.png" alt="Alt text" width="300">
+
 [//]: # (## 6. Tài liệu)
 
 [//]: # ()
