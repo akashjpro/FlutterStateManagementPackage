@@ -167,23 +167,35 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-## 6. Tài liệu
+[//]: # (## 6. Tài liệu)
 
-Tài liệu đi kèm cần làm rõ:
+[//]: # ()
+[//]: # (Tài liệu đi kèm cần làm rõ:)
 
-- Cách khởi tạo state và tích hợp UI.
-- Mô tả API chính (StateManager, StateBuilder, StateProvider).
-- Hướng dẫn sử dụng state phức tạp (map, list, hoặc nested).
+[//]: # ()
+[//]: # (- Cách khởi tạo state và tích hợp UI.)
 
-## 7. Kiểm thử
+[//]: # (- Mô tả API chính &#40;StateManager, StateBuilder, StateProvider&#41;.)
 
-Viết test cho các trường hợp:
+[//]: # (- Hướng dẫn sử dụng state phức tạp &#40;map, list, hoặc nested&#41;.)
 
-- State thay đổi giá trị.
-- UI được cập nhật chính xác.
-- Đồng bộ/bất đồng bộ hoạt động đúng.
-- Kiểm tra rò rỉ bộ nhớ và hiệu suất khi có nhiều state.
+[//]: # ()
+[//]: # (## 7. Kiểm thử)
 
----
+[//]: # ()
+[//]: # (Viết test cho các trường hợp:)
 
-Với cách tiếp cận trên, bạn có thể phát triển một package state manager tối ưu, dễ dùng và linh hoạt cho các ứng dụng Flutter.
+[//]: # ()
+[//]: # (- State thay đổi giá trị.)
+
+[//]: # (- UI được cập nhật chính xác.)
+
+[//]: # (- Đồng bộ/bất đồng bộ hoạt động đúng.)
+
+[//]: # (- Kiểm tra rò rỉ bộ nhớ và hiệu suất khi có nhiều state.)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (Với cách tiếp cận trên, bạn có thể phát triển một package state manager tối ưu, dễ dùng và linh hoạt cho các ứng dụng Flutter.)
