@@ -75,7 +75,111 @@ counterState.addListener(() {
 counterState.reset();
 ```
 
-### 2.3. Sử dụng với UI
+### 2.3. State Builder
+
+```dart
+import 'package:flutter/widgets.dart';
+
+import '../core/state_manager.dart';
+
+typedef StateWidgetBuilder<T> = Widget Function(BuildContext context, T value);
+
+/// Widget to rebuild UI based on state changes
+class StateBuilder<T> extends StatefulWidget {
+  final StateManager<T> state;
+  final StateWidgetBuilder<T> builder;
+
+  const StateBuilder({
+    Key? key,
+    required this.state,
+    required this.builder,
+  }) : super(key: key);
+
+  @override
+  _StateBuilderState<T> createState() => _StateBuilderState<T>();
+}
+
+class _StateBuilderState<T> extends State<StateBuilder<T>> {
+  late T _currentValue;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentValue = widget.state.value;
+    widget.state.addListener(_onStateChanged);
+  }
+
+  void _onStateChanged() {
+    setState(() {
+      _currentValue = widget.state.value;
+    });
+  }
+
+  @override
+  void dispose() {
+    widget.state.removeListener(_onStateChanged);
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.builder(context, _currentValue);
+  }
+}
+```
+### 2.4. State Provider
+
+```dart
+import 'package:flutter/widgets.dart';
+
+import '../core/state_manager.dart';
+
+/// Provides states to the widget tree
+class StateProvider extends InheritedWidget {
+  final List<StateManager> states;
+
+  const StateProvider({
+    Key? key,
+    required this.states,
+    required Widget child,
+  }) : super(key: key, child: child);
+
+  /// Retrieve state from context
+  static T of<T>(BuildContext context) {
+    final StateProvider? provider =
+    context.dependOnInheritedWidgetOfExactType<StateProvider>();
+    return provider!.states.firstWhere((s) => s is StateManager<T>) as T;
+  }
+
+  @override
+  bool updateShouldNotify(covariant StateProvider oldWidget) {
+    return oldWidget.states != states;
+  }
+}
+
+```
+
+### 2.5. Khai báo Package State Management
+
+```dart
+
+library state_management;
+
+// Export the core StateManager
+export 'core/state_manager.dart';
+
+// Export StateBuilder for UI integration
+export 'widgets/state_builder.dart';
+
+// Export StateProvider for state context management
+export 'widgets/state_provider.dart';
+
+// Export the core StateManager
+export 'extensions/async_state_manager.dart';
+
+```
+
+### 2.6. Sử dụng với UI
 
 - **Tích hợp State với UI (StateBuilder):**
 

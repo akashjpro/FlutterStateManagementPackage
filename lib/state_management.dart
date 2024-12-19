@@ -1,5 +1,5 @@
-// package_name.dart
-library package_name;
+
+library state_management;
 
 // Export the core StateManager
 export 'core/state_manager.dart';
