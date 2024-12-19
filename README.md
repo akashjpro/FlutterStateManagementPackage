@@ -9,14 +9,33 @@
 Thư mục chính của package:
 
 ```
-lib/
-  ├── core/
-  │   ├── state_manager.dart   // Logic quản lý state.
-  │   └── state_notifier.dart  // Lớp thông báo state thay đổi.
-  ├── widgets/
-  │   ├── state_builder.dart   // Widget để lắng nghe state.
-  │   └── state_provider.dart  // Cung cấp context cho state.
-  └── package_name.dart        // Điểm khởi đầu của package.
+
+
+FlutterStateManagementPackage/
+├── example/
+│   ├── lib/
+│       └── main.dart
+├── test/
+│   ├── widget_test.dart
+│   └── ...
+├── lib/
+│   │
+│   ├── core/
+│   │   └── state_manager.dart   // Logic quản lý state.
+│   ├── extensions/
+│   │   └── async_state_manager.dart  // Quản lý state bất đòng bộ.
+│   ├── widgets/
+│   │   ├── state_builder.dart   // Widget để lắng nghe state.
+│   │   └── state_provider.dart  // Cung cấp context cho state.
+│   └── state_management.dart        // Điểm khởi đầu của package.
+│  
+├── pubspec.yaml
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+└── analysis_options.yaml
+
+
 ```
 
 Kiến trúc logic:
